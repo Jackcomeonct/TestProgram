@@ -10,4 +10,7 @@ class Settings():
         self.bullet_color = (60, 60, 60)
         self.bullets_allowed = 3
         self.alien_speed_factor = 1
+        self.fleet_drop_speed = 10
+        #fleet_direction为1代表向右移动，为-1代表向左移动
+        self.fleet_direction = 1
 
