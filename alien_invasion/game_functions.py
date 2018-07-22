@@ -53,12 +53,13 @@ def check_play_button(ai_settings, screen, stats, play_button, ship, aliens, bul
         #隐藏光标
         pygame.mouse.set_visible(False)
 
-def update_screen(ai_settings, screen, stats, ship, aliens, bullets, play_button):
+def update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button):
     screen.fill(ai_settings.bg_color)
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     ship.blitme()
     aliens.draw(screen)
+    sb.show_score()
     #如果游戏处于非活动状态，就绘制Play按钮
     if not stats.game_active:
         play_button.draw_button()
